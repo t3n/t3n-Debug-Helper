@@ -25,5 +25,5 @@ Download t3n-debug.css and put it in your html file.
 
 Next Steps
 ==========
-* include depricated tags
-* check grids of major UI-Frameworks (Bootstrap, Yaml etc)
+* include more depricated tags
+* check grids for major UI-Frameworks (Bootstrap, Yaml etc)
