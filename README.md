@@ -4,7 +4,7 @@ t3n-Debug-Helper
 Small css/html debug library. Find small issues instantly and get unpropper markup indicated in your CSS or HTML.
 Keep in mind: Use validators for checking your markup.
 
-The t3n Debug-Helper supports you with following issues:
+The t3n Debug-Helper supports you with the following issues:
 * provides .debug classes
 * checks alt-attributes on images
 * checks title-attributs on links
