@@ -23,3 +23,7 @@ Install
 =======
 Download t3n-debug.css and put it in your html file.
 
+Next Steps
+==========
+* include depricated tags
+* check grids of major UI-Frameworks (Bootstrap, Yaml etc)
