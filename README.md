@@ -19,3 +19,8 @@ The t3n Debug-Helper supports you with following issues:
 * checks for empty tags
 * checks for proper use of styles
 
+Install
+=======
+Download t3n-debug.css and implement it in your html file
+e.g. <link rel="stylesheet" href="t3n-debug.css">
+
