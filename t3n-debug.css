@@ -1,0 +1,97 @@
+/**
+ * t3n Debug-Helper
+ * Author: Mario Janschitz (mjanschitz.at);
+ * Indicates unpropper markup in your CSS or HTML
+ * Please note that this method of checking your markup quality is only to indicate
+ * small issues. Validate your markup!
+ * ---
+ * Validation Tools
+ * ---
+ * W3C Validator HTML: 
+ * http://validator.w3.org/
+ * CSSLint:
+ * http://csslint.net/
+ */
+
+/* Main debug classes */
+/* -----------------*/
+body { background: rgba(0,255,0,.4);}
+.debug{ outline: 1px dashed gray;}
+    /* Set a color */
+    .debug.r{ background: rgba(255,0,0,.5);}
+    .debug.b{ background: rgba(0,0,255,.5);}
+    .debug.g{ background: rgba(0,255,0,.5);}
+
+/* Generic classes */
+/* -----------------*/
+img[alt]{ outline:none;}                        /* Images require alt-attributes, empty alt's should be double checked */
+img[alt=""]{ outline:1px solid yellow;}         /* Images require alt-attributes, empty alt's should be double checked */
+
+a{ outline:1px solid yellow;}                   /* It is a good idea to check yout title attributes on links */
+a[title]{ outline:none;}                        /* It is a good idea to check yout title attributes on links */
+
+a[href="#"],
+a[href*="javascript"]{
+    outline:1px solid yellow;                   /* Doublecheck your links*/
+}
+a[target]{ outline:1px solid yellow;}           /* target attributes are ok, but you should let the user decide*/
+ul > *:not(li){ outline:1px solid yellow;}      /* Make sure that your lists have proper children*/
+ol > *:not(li){ outline:1px solid yellow;}      /* Make sure that your lists have proper children*/
+
+th{outline:1px solid yellow;}                   /* It’s always nice to give the th attribute a scope.*/
+th[scope]{ outline:none;}                       /* It’s always nice to give the th attribute a scope.*/
+
+table > tr{ outline:1px solid yellow;}          /* Why is there no thead or tbody? */
+
+form{ outline:1px solid yellow;}                /* The form needs some action*/
+form[action]{ outline:none;}                    /* The form needs some action*/
+
+/* Check your input fields*/
+/* -----------------*/
+textarea,
+input{
+    outline:1px solid yellow;
+}
+input[type]{ outline:none;}
+textarea[rows][cols]{ outline:none;}
+input[type=submit]{ outline:1px solid yellow;}
+input[type=submit][value]{ outline:none;}
+
+ select > *:not(optgroup){
+    outline: 1px solid yellow;                  /* Maybe you can use an "optgroup" */
+ }
+
+ /* Layered View - http://www.marcofolio.net/css/css_trick_debug_your_html_and_css.html*/
+ /* -----------------*/
+* *:hover { border:2px solid #89A81E }                   /* Solid Green */
+* * *:hover { border:2px solid #F34607 }                 /* Solid Orange */
+* * * *:hover { border:2px solid #5984C3 }               /* Solid Blue */
+* * * * *:hover { border:2px solid #CD1821 }             /* Solid Red */
+* * * * * *:hover { border:2px dotted #89A81E }          /* Dotted Green */
+* * * * * * *:hover { border:2px dotted #F34607 }        /* Dotted Orange */
+* * * * * * * *:hover { border:2px dotted #5984C3 }      /* Dotted Blue */
+* * * * * * * * *:hover { border:2px dotted #CD1821 }    /* Dotted Red */
+
+/* Check for depricated ot empty tags*/
+/* -----------------*/
+b,              /* use <strong> instead */
+i,              /* use <em> instead */
+small,          /* use <cite> or proper <font> instead */
+big,            /* use <cite> or proper <font> instead */
+strike,         /* use <del> or instead */
+:empty          /* avoid empty tags */
+{
+    outline:1px solid yellow!important;
+}
+
+/* Good Manners */
+/* -----------------*/
+[style]{ outline:1px solid yellow;}         /* Whoops! Inline Style.*/
+[id]{ outline:1px solid yellow;}            /* You should avoid using id's for css */
+img[border]{ outline: 1px solid yellow;}    /* Set the border attribute with css*/
+
+/* Check your Grids*/
+/* -----------------*/
+/* Bootstrap*/
+/* Foundation*/
+/* etc.*/
